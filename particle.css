@@ -103,10 +103,6 @@ body, font, .pm_opensans {
     color: var(--main-font-color);
 }
 
-.conversation .row .senders {
-    color: var(--main-font-color);
-}
-
 .navigationItem-title {
     overflow: hidden;
     padding-right: 25px;
@@ -497,6 +493,10 @@ body section.sidebar ul.menu li.active a i.fa,
     text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 18px
+}
+
+.conversation.read {
+    color: var(--main-font-color)
 }
 
 .conversation .row {
