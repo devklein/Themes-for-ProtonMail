@@ -1,0 +1,1163 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+* {box-shadow: none !important}
+
+:focus {outline: transparent !important}
+
+
+/* Colour variables
+  ========================================
+*/
+
+:root {
+    --main-background: hsl(0, 0%, 8%);
+    --second-background: hsl(0, 0%, 10%);
+    --sidebar-background: hsl(0, 0%, 10%);
+    --log-navbar-background: hsla(0, 0%, 10%, .9);
+    --main-navbar-background: hsl(240, 8%, 35%);
+    --header-background: hsl(0, 0%, 10%);
+    --row-highlight-color: hsl(234, 8%, 20%);
+    --row-select-color: hsl(0, 0%, 8%);
+    --border-color: hsl(0, 0%, 8%);
+    --main-font-color: hsl(207, 5%, 76%);
+    --second-font-color: hsl(0, 0%, 100%);
+    --third-font-color: hsl(221, 8%, 45%);
+    --fourth-font-color: hsl(169, 29%, 66%);
+    --fifth-font-color: hsl(349, 60%, 59%);
+    --button-background: hsl(234, 37%, 69%);
+    --button-background-hover: hsl(234, 37%, 73%);
+    --second-button-background: hsl(0, 0%, 13%);
+    --link-color: hsl(236, 37%, 69%);
+    --link-color-hover: hsl(234, 27%, 48%);
+}
+
+
+/* Login
+  ========================================
+*/
+
+body#login {
+    background-color: hsl(0, 0%, 9%);
+}
+
+.headerNoAuth-container {
+    background: var(--log-navbar-background);
+    padding: 0 10px;
+    color: var(--second-font-color);
+}
+
+.pm_panel.alt,
+.pm-loader-fullpage {
+    background: var(--log-navbar-background) !important;
+    border-color: hsla(0, 0%, 50%, .5) !important;
+    box-shadow: 0 2px 10px 0 hsla(0, 0%, 0%, .2) !important;
+}
+
+#pm_login input[type=text],
+#pm_login .customPasswordToggler.loginForm-input-password .password-input[type=password],
+#pm_login .customPasswordToggler.unlock-input-password .password-input[type=password],
+#pm_loginTwoFactor .customPasswordToggler.loginForm-input-password .password-input[type=password],
+#pm_loginTwoFactor .customPasswordToggler.unlock-input-password .password-input[type=password],
+body#reset .customPasswordToggler.loginForm-input-password .password-input[type=password],
+body#reset .customPasswordToggler.unlock-input-password .password-input[type=password] {
+    background: hsl(0, 0%, 9%) !important;
+    border-color: hsl(0, 0%, 13%) !important;
+}
+
+.loginForm-btn-help,
+.loginForm-link-signup {
+    text-decoration: none !important;
+}
+
+.loginForm-btn-help:hover,
+.loginForm-link-signup,
+.customPasswordToggler.password-container .togglePassword-btn-toggle:hover,
+.togglePassword-btn-toggle.togglePassword-btn-display {
+    color: var(--main-color) !important;
+}
+
+
+/* Font options
+  ========================================
+*/
+
+body, font, .pm_opensans {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: var(--main-font-color)
+}
+
+#pm_main,
+.listAttachments-list .listAttachments-att,
+.sidebarApp-item .navigationItem-aside {
+    background: var(--main-background);
+    color: var(--main-font-color);
+}
+
+.conversation .row .senders {
+    color: var(--main-font-color);
+}
+
+.navigationItem-title {
+    overflow: hidden;
+    padding-right: 25px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#conversation-view header h1,
+.conversationPlaceholder header {
+    font-size: 1.3rem;
+    color: var(--button-background);
+    padding: 20px;
+}
+
+.conversationPlaceholder header,
+.conversation .row h4,
+.conversation .row .meta time.time,
+#pm_thread>article>div:nth-child(3)>div.frame.message-frame>div>div:nth-child(2)>div {
+    color: var(--third-font-color) !important;
+}
+
+.pm_modal .modal-dialog .modal-content h4 {
+    color: var(--fifth-font-color)
+}
+
+#conversation-view .message .details .recipients-summary {
+    color: var(--button-background);
+}
+
+
+.headerDesktop-container form.searchForm-container .search-form-fieldset .search-form-fieldset-input {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .8px
+}
+
+.navigation-title {
+    font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300
+}
+
+.headerBlock-container [class*=title] {
+    font-weight: 400;
+}
+
+.sidebarApp-container ul.menu li a,
+.settingsMenu-container .donateBtn-container {
+    transition: all .3s ease;
+    color: var(--third-font-color);
+    font-size: .7rem;
+    letter-spacing: .5px;
+    margin: 5px 0 0 5px;
+    font-weight: 500
+}
+
+.sidebarApp-container ul.menu li a i.fa {
+    color: var(--third-font-color);
+    line-height: 28px;
+    font-size: 13px;
+    margin-right: 8px
+}
+
+.sidebarApp-container ul.menu li a .fa-repeat {
+    color: var(--third-font-color);
+    transition: all .3s ease
+}
+
+.sidebarApp-container ul.menu li a .fa-repeat:hover {
+    color: var(--third-font-color);
+    transform: rotate(60deg)
+}
+
+.sidebarApp-container ul.menu li a em {
+    letter-spacing: 1px;
+    color: var(--third-font-color);
+    margin-left: 3px
+}
+
+.sidebarApp-container body section.sidebar .backToInbox+ul.menu::before {
+    display: none
+}
+
+.menuLabel-item .menuLabel-title {
+    margin-left: 5px;
+}
+
+.messageExtra-container>[class*=-container] [class$=-notice-text] {
+    font-weight: 500;
+}
+
+
+/* Content
+  ========================================
+*/
+
+body #conversation-list-columns {
+    width: 30%;
+    border-right: 4px solid var(--main-background);
+}
+
+body #conversation-view,
+body #pm_view {
+    width: 70%;
+}
+
+body #pm_main,
+#ptSidebar {
+    height: calc(100% - 44px);
+}
+
+body.appConfigBody-is-mobile,
+body.appConfigBody-is-mobile #body,
+body.secure,
+body.secure #body,
+body #pm_view.latest,
+.countElementsSelected-container {
+    background: var(--main-background);
+}
+
+/* Alerts */
+
+.alert.alert-info {
+    background-color: var(--header-background);
+    color: var(--main-font-color);
+}
+
+/*Welcome*/
+.conversationPlaceholder header {
+    color: var(--main-text) !important;
+}
+
+.conversationPlaceholder #storageStatus .wrap span {
+    color: var(--dimmer-text) !important;
+}
+
+.conversationPlaceholder #storageStatus .wrap span strong {
+    color: var(--main-color) !important;
+}
+
+.conversationPlaceholder header,
+.conversationPlaceholder section {
+    border-color: var(--hover-background) !important;
+}
+
+.storageBar {
+    background-color: var(--dimmer-text) !important;
+}
+
+.conversationPlaceholder section img {
+    filter: invert(.92) grayscale(1);
+}
+
+/*Tutorial*/
+#pm_wizard {
+    background: var(--hover-background) !important;
+}
+
+#pm_wizard .close {
+    color: var(--main-text) !important;
+}
+
+#pm_wizard .close:hover {
+    color: var(--main-color) !important;
+}
+
+#pm_wizard.wizardStep-1 .pagination .pagination-step-1 a,
+#pm_wizard.wizardStep-2 .pagination .pagination-step-2 a,
+#pm_wizard.wizardStep-3 .pagination .pagination-step-3 a,
+#pm_wizard.wizardStep-4 .pagination .pagination-step-4 a {
+    background-color: var(--main-color) !important;
+}
+
+#pm_wizard [class^="step-"] .body strong {
+    color: var(--main-color) !important;
+}
+
+/* Top navigation bar & toolbar
+  ========================================
+*/
+
+.headerDesktop-container,
+.headerDesktop-logo,
+.headerSecuredDesktop-container,
+.headerSecuredDesktop-logo,
+.headerSecuredMobile-container {
+    background: var(--main-navbar-background);
+    height: 50px;
+}
+
+.search-form-fieldset {
+    background: hsla(0, 0%, 100%, .05);
+    border-radius: 3px;
+}
+
+.navigation {
+    padding: 0;
+}
+
+.navigation-link {
+    color: var(--second-font-color);
+}
+
+.navigation-link:hover {
+    background-color: hsla(0, 0%, 100%, .05);
+    color: var(--main-font-color) !important;
+}
+
+.navigation>li {
+    border: 0;
+}
+
+.navigation>li.active,
+.navigation>li:hover {
+    box-shadow: none;
+    background-color: hsla(0, 0%, 100%, .05)
+}
+
+.pm_toolbar.pm_toolbar_withSelector,
+.pm_toolbar {
+    background-color: var(--second-background);
+    padding: 8px 5px 5px 13px;
+    height: 50px;
+    border-bottom: 3px solid var(--main-background);
+    box-shadow: none;
+}
+
+.pm_dropdown.right {
+    right: 1px;
+}
+
+.pm_dropdown>button:hover {
+    background-color: var(--row-highlight-color);
+}
+
+body .cg-notify-message,
+body .cg-notify-message.notification-success {
+    background-color: var(--fourth-font-color);
+    color: var(--second-font-color) !important;
+    border: 1px solid var(--fourth-font-color);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+body .cg-notify-message.notification-danger {
+    background-color: var(--fifth-font-color);
+    color: var(--second-font-color) !important;
+    border: 1px solid var(--fifth-font-color);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.headerDesktop-container ul.navigation>li:last-child:after {
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    display: block;
+    content: "\f107";
+    font: normal normal normal 14px/1 "FontAwesome";
+    color: var(--second-font-color)
+}
+
+/* Hides icons */
+
+.headerDesktop-container ul.navigation .navigation-icons,
+.headerDesktop-container ul.navigation .navigation-icon {
+    display: none
+}
+
+
+/* Sidebar
+  ========================================
+*/
+
+.sidebarApp-container {
+    background-color: var(--sidebar-background);
+    border-right: 3px solid var(--main-background)
+}
+
+.menuLabel-item.active .menuLabel-link,
+.sidebarApp-item.active .navigationItem-item,
+.sidebarApp-item.active .sidebarApp-link {
+    background-color: var(--main-background);
+    border-color: transparent;
+    color: var(--main-font-color);
+    font-weight: 500;
+}
+
+.sidebarApp-item .navigationItem-item:hover,
+.sidebarApp-item .sidebarApp-link:hover,
+.sidebarApp-menu .menuLabel-link:hover {
+    background-color: var(--row-highlight-color);
+}
+
+.fa-folder:before,
+.sidebarApp-container div.labels ul li a .fa-tag:before {
+    content: "\f10c"
+}
+
+.sidebarApp-item .navigationItem-aside,
+.sidebarApp-item.active .navigationItem-aside {
+    background: none;
+}
+
+/* Sidebar icons */
+
+.sidebarApp-container ul.menu:before,
+.sidebarApp-container ul.menu .sidebarApp-label {
+    font-size: 13px;
+    color: var(--third-font-color);
+}
+
+body section.sidebar ul.menu li.active a i.fa:hover {
+    color: var(--button-background-hover)
+}
+
+body section.sidebar ul.menu li.active a i.fa,
+.sidebarApp-container ul.menu li.active a,
+.sidebarApp-container ul.menu li a:hover,
+.sidebarApp-container div.labels ul li a:hover,
+.sidebarApp-container ul.menu:hover:before,
+.sidebarApp-container ul.menu .sidebarApp-label:hover,
+.menuLabel-item.active .menuLabel-title {
+    color: var(--button-background-hover);
+    background-color: var(--row-select-color);
+}
+
+[id=sidebarLabels] .menuLabel-link {
+    padding: 0 25px 0 20px;
+}
+
+.sidebarApp-container div.labels ul li a {
+    color: var(--third-font-color);
+    font-size: 13px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#pm_sidebar>ul:nth-child(2)>li.sidebarApp-item.navigationItem-container>a>div>em {
+    color: var(--fourth-font-color);
+}
+
+#pm_sidebar>ul:nth-child(2)>li.sidebarApp-item.navigationItem-container.active>a>div>em {
+    color: var(--button-background);
+}
+
+.settingsMenu-container .sidebarApp-menu .sidebarApp-item::after,
+.sidebarApp-item .navigationItem-aside {
+    background: transparent !important;
+}
+
+
+/* Conversation panel
+  ========================================
+*/
+
+.conversation .customMaskInput-container {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 15px
+}
+
+#conversation-list-rows .conversation .customMaskInput-container {
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0
+}
+
+.conversation-wrapper {
+    background: var(--second-background) !important;
+}
+
+.conversation {
+    transition: all .3s ease;
+    background: var(--second-background) !important;
+    color: var(--fourth-font-color);
+    border-bottom: 3px solid var(--main-background);
+    padding: 15px 15px 15px 8px;
+    height: 80px;
+    font-size: 12px;
+    letter-spacing: .8px;
+}
+
+.conversation .subject-text .ellipsis {
+    overflow: hidden;
+    width: 260px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 18px
+}
+
+.conversation .row {
+    height: auto
+}
+
+.conversation .row h4 {
+    font-size: 11px;
+    color: var(--main-font-color);
+    line-height: 18px;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    font-weight: 600 !important
+}
+
+.conversation .row h4 .subject-num-message {
+    display: none
+}
+
+.conversation .conversation-meta {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative
+}
+
+.conversation .conversation-meta,
+.conversation .row {
+    background: transparent !important;
+}
+
+.conversation.active {
+    background: var(--row-highlight-color) !important;
+    color: var(--main-font-color);
+    border-bottom: 3px solid var(--main-background);
+}
+
+.conversation:hover,
+.conversation.read:hover {
+    background: var(--row-highlight-color) !important
+}
+
+.conversation.marked::before {
+    background: transparent;
+    width: 5px;
+}
+
+.conversation.marked:before,
+.conversation.read.marked:before {
+    display: none
+}
+
+.conversation.selected,
+.conversation.read.selected {
+    color: var(--link-color-hover)
+}
+
+.conversation.selected .row h4,
+.conversation.read.selected .row h4 {
+    color: var(--link-color)
+}
+
+body #conversation-list-rows .conversation.selected .subject h4,
+body #conversation-list-rows .conversation.read.selected .subject h4 {
+    color: var(--link-color-hover)
+}
+
+#conversation-view .message .summary .summary-right {
+    background: none;
+}
+
+.conversation .row.bottom {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 25px;
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.conversation .row.top {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 40px
+}
+
+.conversation .row .meta {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    display: block
+}
+
+.conversation .row .meta time.time {
+    margin-right: 5px
+}
+
+.conversation .row .senders {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 19px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.conversation .row h4 {
+    transition: all .3s ease;
+    height: 34px;
+    overflow: hidden;
+}
+
+.conversation .row h4 .subject-text {
+    padding: 0;
+    white-space: normal;
+    overflow: hidden;
+    color: var(--third-font-color)
+}
+
+.conversation .row .singleStar {
+    float: right
+}
+
+.conversation .row .meta .fa-star-o {
+    color: var(--third-font-color);
+    opacity: .3;
+    padding: 0 5px 0 2px;
+    font-size: 16px !important
+}
+
+.conversation .fa-star {
+    color: hsl(45, 79%, 59%) !important
+}
+
+body #conversation-list-rows .conversation .fa-star,
+body #conversation-list-rows .conversation .fa-star-o {
+    line-height: 55px
+}
+
+.conversation .row h4 .folderConversations-container {
+    display: none
+}
+
+#conversation-view .message .summary .labels,
+#conversation-view .message .summary .location.folders,
+#conversation-view .message .summary .message-attachments,
+#conversation-view .message .summary .status,
+#conversation-view .message .summary .time {
+    background: transparent
+}
+
+
+/* Message panel
+  ========================================
+*/
+
+.messageView-contaniner {
+    background-color: var(--main-background);
+    border-right: 3px solid var(--main-background);
+}
+
+#conversation-view .message .frame,
+.conversationPlaceholder header {
+    background: var(--main-background);
+}
+
+#conversation-view header {
+    background: var(--second-background);
+    border-bottom: 1px solid var(--main-background);
+}
+
+#conversation-view .message .summary {
+    padding: 0 20px 0 20px;
+}
+
+#conversation-view .message .summary .pull-left .location,
+#conversation-view .message .summary .pull-left .meta,
+#conversation-view .message .details .recipients-summary,
+#conversation-view .message .toggleDetails,
+#attachmentArea .title {
+    padding-left: 20px;
+}
+
+#conversation-view .message .details .action-row {
+    padding: 20px 0 10px;
+}
+
+#conversation-view .message .details,
+#conversation-view .message .summary,
+#conversation-view .message .summary .labels,
+#conversation-view .message .summary .status,
+#conversation-view .message .summary .time,
+#conversation-view .message .summary .time:after,
+#conversation-view .message .summary .meta .contact span,
+#conversation-view .message .details .recipients-summary strong,
+#conversation-view .message .toggleDetails,
+.conversationPlaceholder {
+    background: var(--second-background);
+    color: var(--main-font-color);
+}
+
+#conversation-view .message,
+#conversation-view .message .details {
+    border: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--main-background);
+}
+
+#conversation-view .message .summary,
+#conversation-view .message {
+    border-radius: 0;
+}
+
+#conversation-view .message .frame {
+    padding: 30px;
+}
+
+.messageExtra-container>[class*=-container] {
+    border-top: 1px solid var(--main-background);
+    background: var(--main-background);
+    color: var(--main-font-color);
+}
+
+#attachmentArea .title {
+    background: var(--second-background)
+}
+
+.listAttachments-list .listAttachments-att {
+    margin-left: 18px;
+}
+
+#attachmentArea {
+    background: var(--second-background);
+    border: none;
+}
+
+.displayContentBtn-container[data-action=remote] .displayContentBtn-notice:before,
+[class*=listAttachments-icon],
+[class*=listAttachments-icon].embedded {
+    color: var(--link-color);
+}
+
+/* Compose toolbar */
+
+[class*=squireToolbar-row],
+#pm_composer .composer footer {
+    background: var(--header-background)
+}
+
+.composer-askEmbedding {
+    background: var(--main-background);
+    color: var(--main-font-color);
+}
+
+#pm_composer .composer footer {
+    border: 0;
+}
+
+
+/* Buttons
+  ========================================
+*/
+
+.sidebarApp-container .sidebar-btn-compose,
+.sidebarApp-container .sidebar-btn-back {
+    background-color: var(--button-background);
+    border: none !important;
+    color: var(--second-font-color);
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+
+.pm_button.primary {
+    background-color: var(--button-background)
+}
+
+.sidebarApp-container .sidebar-btn-compose:hover,
+.sidebarApp-container .sidebar-btn-back:hover,
+#pm_composer .composer footer .pm_button:hover,
+.pm_button.primary:hover,
+.pm_toggle.on .on:hover {
+    background-color: var(--button-background-hover);
+}
+
+#pm_composer .composer footer .pm_button.primary,
+#pm_composer .composer footer .pm_button.primary:hover {
+    background: var(--fourth-font-color);
+}
+
+.pm_buttons {
+    border: none !important;
+    background: transparent
+}
+
+.pm_buttons .pm_buttons:not(:first-of-type),
+.pm_buttons>* {
+    border: none;
+}
+
+.sidebarApp-container .sidebar-btn-bac,
+.pm_toggle.on .on,
+.pm_toggle.off .off:hover,
+.pm_toggle.off .off {
+    background-color: transparent;
+}
+
+.pm_buttons a,
+.pm_buttons .pm_buttons-child,
+.messageExtra-container>[class*=-container]>[class*=-button] {
+    background-color: transparent;
+    color: var(--third-font-color);
+    border-color: transparent;
+}
+
+#conversation-view .message .details .pm_buttons a,
+.listAttachments-list .listAttachments-att {
+    background-color: var(--second-background);
+}
+
+.pm_buttons a:hover,
+.pm_buttons .pm_buttons-child:hover,
+#conversation-view .message .details .pm_buttons a:hover,
+.messageExtra-container>[class*=-container]>[class*=-button]:hover,
+.listAttachments-item:hover {
+    background-color: var(--row-highlight-color);
+    color: var(--button-background-hover);
+}
+
+.pm_buttons>:first-child {
+    border-radius: 0;
+}
+
+#pm_composer .composer footer .pm_button {
+    background: var(--second-button-background);
+    border: 0;
+}
+
+#uid1>footer>div>button.pm_button.primary.mobileFull.composer-btn-send.btnSendMessage-btn-action {
+    background: var(--fourth-font-color) !important;
+    border: 1px solid var(--fourth-font-color);
+}
+
+body:not(.appConfigBody-rows) .chooseLayoutBtns-btn-column {
+    background: var(--main-background)
+}
+
+.customMaskInput-mask {
+    background: var(--second-button-background) !important;
+    border-color: var(--second-background) !important;
+}
+
+.customCheckbox-input:checked+.customCheckbox-mask,
+.customRadio-input:checked+.customRadio-mask {
+    box-shadow: inset 0 0 0 4px var(--second-button-background), inset 0 0 0 10px var(--button-background) !important;
+    border-color: var(--second-background) !important;
+}
+
+/* Links */
+
+p a,
+a
+.alert a  {
+    color: var(--link-color);
+}
+
+p a:hover,
+a:hover,
+.alert a:hover {
+    color: var(--link-color-hover);
+}
+
+
+/* Settings
+  ========================================
+*/
+
+#pm_settings .settings {
+    background: var(--second-background);
+}
+
+#pm_form input[type=text],
+#pm_form input[type=email] {
+    background: var(--main-background) !important;
+}
+
+.headerBlock-container {
+    border-bottom: 1px solid hsl(0, 0%, 30%)
+}
+
+.pm-button:hover {
+    background-color: var(--button-background-hover) !important;
+    color: white
+}
+
+.settingsDashboard-plan {
+    background: var(--second-background);
+    background-image: none;
+    border: 1px solid var(--main-background);
+}
+
+.settingsDashboard-plans [class*=Column-container] [class*=addonRow] .pm_select select {
+    background-color: var(--main-background);
+    color: var(--third-font-color);
+    border-radius: 0;
+}
+
+.currencySelector-container .currencySelector-button {
+    background-color: var(--second-background);
+    border: 1px solid var(--main-background)
+}
+
+.currencySelector-container .currencySelector-button.active {
+    background-color: var(--main-background);
+}
+
+.autoresponderMessageDisabler {
+    background: var(--main-background);
+    border: 0;
+}
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 4px;
+    background: var(--main-background);
+    color: var(--third-font-color);
+}
+
+#pm_settings .settings .squireToolbar-container,
+#pm_settings .settings .angular-squire-wrapper,
+.pm_sort-item-content,
+.pm_sort-container {
+    border-color: var(--border-color) !important;
+}
+
+.squireToolbar-separator {
+    background: var(--second-background) !important;
+}
+
+/*signature*/
+[class*="squireToolbar-row"],
+[class*="squireToolbar-action-"],
+[class*="squireToolbar-action-"]:hover {
+    background: var(--second-background) !important;
+    border-color: var(--second-background) !important;
+}
+
+.pm_form label,
+[class*="squireToolbar-action-"] {
+    color: var(--main-text) !important;
+}
+
+[class*="squireToolbar-action-"]:hover {
+    color: var(--main-color) !important;
+}
+
+.as-sortable-item-handle::before {
+    opacity: .8;
+}
+
+.pm_badge,
+.pm_tag {
+    background: var(--main-color) !important;
+}
+
+/*delete account*/
+.pm_button.error {
+    color: var(--main-text) !important;
+    background: var(--red) !important;
+}
+
+.pm_button.error:focus,
+.pm_button.error:hover {
+    filter: brightness(110%);
+}
+
+/*add dialog*/
+.pm_modal .modal-dialog {
+    box-shadow: var(--shadow) !important;
+}
+
+.pm_modal .modal-dialog,
+.labelModal-item-mask {
+    border-color: var(--second-background) !important;
+}
+
+.pm_modal .modal-dialog .close,
+.pm_modal .modal-dialog .modal-content,
+.pm_modal .modal-dialog,
+.pm_modal .modal-dialog .modal-footer {
+    background: var(--second-background) !important;
+}
+
+.pm_modal .modal-dialog .close:hover {
+    color: var(--main-color) !important;
+}
+
+/*security settings*/
+.pm_table table th {
+    background: var(--second-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.pm_table table.bordered,
+.pm_table table tr:not(:last-child) td,
+.pm_table table thead {
+    border-color: var(--border-color) !important;
+}
+
+.pm_table table td,
+.pm_table table th {
+    color: var(--main-text) !important;
+}
+
+/*toggle*/
+.pm_toggle-checkbox:focus+.pm_toggle-label,
+.pm_toggle-label:hover,
+.pm_toggle-checkbox:checked+.pm_toggle-label,
+.pm_toggle-checkbox+.pm_toggle-label {
+    background: var(--hover-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.pm_toggle-label::after {
+    background: var(--dimmer-text) !important;
+    opacity: .7;
+}
+
+.pm_toggle-checkbox:checked+.pm_toggle-label::after {
+    background: var(--main-color) !important;
+    opacity: 1;
+}
+
+/*adresses*/
+.pm_table table tr.hasTable table {
+    background: var(--second-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+/*proton vpn*/
+.vpn-container .vpn-ressourcesSection-clients-list {
+    background: var(--hover-background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.vpn-container .vpn-ressourcesSection-clients-item-container {
+    background: var(--second-background) !important;
+}
+
+/*Dashboard*/
+.settingsDashboard-overview-section-table-container,
+#pm_settings .well,
+.settingsDashboard-plans [class*="Column-container"]> :not(:last-child),
+.settingsDashboard-plans [class*="Column-container"],
+.settingsDashboard-plans .totalRows-container>label:not(:first-of-type)::before {
+    border-color: var(--border-color) !important;
+}
+
+.settingsDashboard-overview-section-table-container .overviewSection-container .overviewSection-tbody-billing>tr>th,
+.settingsDashboard-overview-section-table-container .overviewSection-container .overviewSection-tbody>tr>th {
+    color: var(--main-text) !important;
+}
+
+.overviewSection-tbody>tr td strong,
+.settingsDashboard-plans [class*="Column-container"]> :not(:last-child) {
+    color: var(--dimmer-text) !important;
+}
+
+.overviewSection-container .topUp-button,
+.giftCodeBtn-container,
+.settingsDashboard-plans .freeColumn-free,
+.settingsDashboard-plans .planPrice,
+.totalRows-2-years-price,
+.totalRows-monthly-price,
+.totalRows-yearly-price {
+    color: var(--main-color) !important;
+}
+
+.settingsDashboard-overview-section-table-container .overviewSection-container .overviewSection-tbody-billing {
+    background: var(--hover-background) !important;
+}
+
+.settingsDashboard-plans {
+    background: var(--second-background) !important;
+}
+
+.settingsDashboard-plans::after,
+.settingsDashboard-plans::before {
+    background: transparent !important;
+}
+
+.settingsDashboard-plans.free-active .freeColumn-container,
+.settingsDashboard-plans.plus-active .plusColumn-container,
+.settingsDashboard-plans.professional-active .professionalColumn-container,
+.settingsDashboard-plans.visionary-active .visionaryColumn-container {
+    border-color: var(--button-background) !important;
+}
+
+[class*="settingsDashboard-arrowToScroll"] .arrowsToScroll-button {
+    background-color: var(--hover-background) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+/*Compose email*/
+#pm_composer .composer {
+    box-shadow: var(--shadow) !important;
+}
+
+.composerHeader-container {
+    background: var(--main-navbar-background) !important;
+    color: var(--second-font-color)
+}
+
+#pm_composer .composer .row {
+    border-color: var(--border-color) !important;
+}
+
+#pm_composer .composer .row,
+.squireEditor-loaded .row,
+#pm_composer input,
+#pm_composer select,
+#pm_composer textarea {
+    color: var(--main-text) !important;
+    background: var(--main-background) !important;
+}
+
+.composerInputMeta-overlay,
+.autocompleteEmails-autocomplete,
+.autocomplete-container .awesomplete li[aria-selected="true"],
+.autocomplete-container .awesomplete li[aria-selected="true"]:hover,
+.autocompleteEmails-autocomplete li[aria-selected="true"],
+.autocompleteEmails-autocomplete li[aria-selected="true"]:hover,
+.squireEditor-loaded footer {
+    border-color: var(--border-color) !important;
+    background: var(--hover-background) !important;
+}
+
+.autocompleteEmailsItem-icon .encryptionIcon,
+.autocompleteEmails-btn-remove:hover {
+    color: var(--main-color) !important;
+}
+
+.composerInputMeta-overlay,
+.composerTime-container,
+.autocompleteEmails-label,
+.autocompleteEmails-btn-remove {
+    color: var(--main-text) !important;
+}
+
+.composerInputMeta-overlay-list .svg-ellipsis-clipper,
+.autocompleteEmails-item {
+    background: transparent !important;
+}
+
+.autocompleteEmails-item {
+    border-color: var(--border-color) !important;
+    background: var(--hover-background) !important;
+}
+
+/*expiration time*/
+#pm_composer .composer footer .pm_button svg,
+.squireEditor-loaded footer .pm_button svg {
+    fill: var(--main-text) !important;
+}
+
+#pm_composer .composer footer .pm_button:hover svg,
+.squireEditor-loaded footer .pm_button:hover svg {
+    fill: var(--main-color) !important;
+}
