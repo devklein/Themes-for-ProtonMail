@@ -42,7 +42,7 @@ body {
 */
 
 body#login {
-    background-color: hsl(0, 0%, 9%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 .headerNoAuth-container {
@@ -52,11 +52,13 @@ body#login {
 }
 
 .pm_panel.alt,
-.pm-loader-fullpage {
+.pm-loader-fullpage,
+.pm_panel-login__inner {
     background: var(--log-navbar-background) !important;
     border-color: hsla(0, 0%, 50%, .5) !important;
     box-shadow: 0 2px 10px 0 hsla(0, 0%, 0%, .2) !important;
 }
+
 
 #pm_login input[type=text],
 #pm_login .customPasswordToggler.loginForm-input-password .password-input[type=password],
@@ -102,10 +104,6 @@ body, font, .pm_opensans {
     color: var(--main-font-color);
 }
 
-.conversation .row .senders {
-    color: var(--main-font-color);
-}
-
 .navigationItem-title {
     overflow: hidden;
     padding-right: 25px;
@@ -145,7 +143,7 @@ body, font, .pm_opensans {
 
 .navigation-title {
     font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 300
 }
 
@@ -312,7 +310,7 @@ body #pm_view.latest,
 
 .navigation-link:hover {
     background-color: hsla(0, 0%, 100%, .05);
-    color: var(--main-font-color) !important;
+    color: var(--second-font-color) !important;
 }
 
 .navigation>li {
@@ -498,6 +496,10 @@ body section.sidebar ul.menu li.active a i.fa,
     line-height: 18px
 }
 
+.conversation.read {
+    color: var(--main-font-color)
+}
+
 .conversation .row {
     height: auto
 }
@@ -656,7 +658,7 @@ body #conversation-list-rows .conversation .fa-star-o {
 
 #conversation-view .message .frame,
 .conversationPlaceholder header {
-    background: var(--main-background);
+    background: var(--second-background);
 }
 
 #conversation-view header {
@@ -1119,7 +1121,6 @@ a:hover,
 }
 
 .composerInputMeta-overlay,
-.autocompleteEmails-autocomplete,
 .autocomplete-container .awesomplete li[aria-selected="true"],
 .autocomplete-container .awesomplete li[aria-selected="true"]:hover,
 .autocompleteEmails-autocomplete li[aria-selected="true"],
